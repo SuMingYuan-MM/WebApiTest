@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login Test</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            getAccessToken();
+
+            $('#btnFacebookLogin').click(function () {
+                debugger;
+                window.location.href = "/api/Account/ExternalLogin?provider=Facebook&response_type=token&client_id=self&redirect_uri=https%3A%2F%2Flocalhost%3A44381%2F&state=pCqLES153sLn2Wj9y3H7NpLc1VgvY4VhVoIAlAS0yDg1";
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Social Login</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="button" id="btnFacebookLogin" value="Facebook Login"/></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
